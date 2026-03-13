@@ -5,8 +5,7 @@
  * Endpoint: https://ark.cn-beijing.volces.com/api/v3/images/generations
  *
  * Supported models:
- * - doubao-seedream-5-0-260128  (latest, text2img + img2img + multi-ref + group)
- * - doubao-seedream-5-0-lite-260128
+ * - doubao-seedream-5-0-260128  (latest / Lite, text2img + img2img + multi-ref + group)
  * - doubao-seedream-4-5-251128
  * - doubao-seedream-4-0-250828
  * - doubao-seedream-3-0-t2i-250415
