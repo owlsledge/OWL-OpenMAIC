@@ -12,30 +12,29 @@ import { getActionDescriptions, getEffectiveActions } from './tool-schemas';
 // ==================== Role Guidelines ====================
 
 const ROLE_GUIDELINES: Record<string, string> = {
-  teacher: `Your role in this classroom: LEAD TEACHER.
+  teacher: `Your role in this learning session: LEAD FACILITATOR.
 You are responsible for:
-- Controlling the lesson flow, slides, and pacing
-- Explaining concepts clearly with examples and analogies
-- Asking questions to check understanding
-- Using spotlight/laser to direct attention to slide elements
-- Using the whiteboard for diagrams and formulas
-You can use all available actions. Never announce your actions — just teach naturally.`,
+- Guiding the flow of the learning experience, slides, and pacing
+- Grounding every concept in workplace relevance and real business application
+- Asking questions that activate learners' prior experience, not just checking comprehension
+- Using spotlight/laser to direct attention to key slide elements
+- Using the whiteboard for frameworks, models, and synthesis
+You can use all available actions. Never announce your actions — just facilitate naturally.`,
 
-  assistant: `Your role in this classroom: TEACHING ASSISTANT.
+  assistant: `Your role in this learning session: LEARNING SUPPORT.
 You are responsible for:
-- Supporting the lead teacher by filling gaps and answering side questions
-- Rephrasing explanations in simpler terms when students are confused
-- Providing concrete examples and background context
-- Using the whiteboard sparingly to supplement (not duplicate) the teacher's content
-You play a supporting role — don't take over the lesson.`,
+- Supporting the facilitator by bridging theory to practice
+- Rephrasing concepts in simpler, more job-relevant terms when learners need it
+- Offering concrete workplace examples and background context
+- Using the whiteboard sparingly to supplement (not duplicate) the facilitator's content
+You play a supportive role — don't take over the session.`,
 
-  student: `Your role in this classroom: STUDENT.
+  student: `Your role in this learning session: LEARNER.
 You are responsible for:
-- Participating actively in discussions
-- Asking questions, sharing observations, reacting to the lesson
+- Participating actively — sharing reactions, asking questions, connecting to your own experience
 - Keeping responses SHORT (1-2 sentences max)
-- Only using the whiteboard when explicitly invited by the teacher
-You are NOT a teacher — your responses should be much shorter than the teacher's.`,
+- Only using the whiteboard when explicitly invited by the facilitator
+You are NOT a facilitator — your responses should be much shorter and peer-voiced.`,
 };
 
 // ==================== Types ====================
@@ -114,12 +113,12 @@ export function buildStructuredPrompt(
   // Build virtual whiteboard context from ledger (shows changes by other agents this round)
   const virtualWbContext = buildVirtualWhiteboardContext(storeState, whiteboardLedger);
 
-  // Build student profile section (only when nickname or bio is present)
+  // Build learner profile section (only when nickname or bio is present)
   const studentProfileSection =
     userProfile?.nickname || userProfile?.bio
-      ? `\n# Student Profile
-You are teaching ${userProfile.nickname || 'a student'}.${userProfile.bio ? `\nTheir background: ${userProfile.bio}` : ''}
-Personalize your teaching based on their background when relevant. Address them by name naturally.\n`
+      ? `\n# Learner Profile
+You are facilitating for ${userProfile.nickname || 'a learner'}.${userProfile.bio ? `\nTheir background: ${userProfile.bio}` : ''}
+Connect content to their professional context when relevant. Address them by name naturally.\n`
       : '';
 
   // Build peer context section (what agents already said this round)
