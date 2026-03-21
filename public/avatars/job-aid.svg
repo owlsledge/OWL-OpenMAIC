@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" fill="none">
+  <!-- Background circle -->
+  <circle cx="140" cy="140" r="140" fill="#f0fdf4"/>
+  <!-- Head -->
+  <circle cx="140" cy="100" r="30" fill="#bbf7d0"/>
+  <!-- Eyes -->
+  <circle cx="128" cy="95" r="4" fill="#1e293b"/>
+  <circle cx="152" cy="95" r="4" fill="#1e293b"/>
+  <!-- Focused/precise smile -->
+  <path d="M130 109 Q140 117 150 109" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Hair -->
+  <path d="M112 90 Q116 74 140 72 Q164 74 168 90" fill="#15803d"/>
+  <!-- Body -->
+  <path d="M100 155 Q110 145 140 145 Q170 145 180 155 L188 200 Q164 210 140 210 Q116 210 92 200 Z" fill="#22c55e"/>
+  <!-- Document with checklist -->
+  <rect x="96" y="218" width="88" height="54" rx="6" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <line x1="108" y1="232" x2="172" y2="232" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="108" y1="242" x2="160" y2="242" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="108" y1="252" x2="165" y2="252" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M103 231 L107 235 L115 226" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

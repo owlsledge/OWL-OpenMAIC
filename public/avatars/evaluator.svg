@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" fill="none">
+  <!-- Background circle -->
+  <circle cx="140" cy="140" r="140" fill="#f0fdfa"/>
+  <!-- Head -->
+  <circle cx="140" cy="100" r="30" fill="#ccfbf1"/>
+  <!-- Eyes -->
+  <circle cx="128" cy="95" r="4" fill="#1e293b"/>
+  <circle cx="152" cy="95" r="4" fill="#1e293b"/>
+  <!-- Neutral/analytical expression -->
+  <path d="M130 110 L150 110" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Hair -->
+  <path d="M112 90 Q115 72 140 70 Q165 72 168 90" fill="#0f766e"/>
+  <!-- Body -->
+  <path d="M100 155 Q110 145 140 145 Q170 145 180 155 L188 200 Q164 210 140 210 Q116 210 92 200 Z" fill="#14b8a6"/>
+  <!-- Bar chart icon -->
+  <rect x="92" y="220" width="14" height="40" rx="3" fill="#14b8a6"/>
+  <rect x="113" y="210" width="14" height="50" rx="3" fill="#0d9488"/>
+  <rect x="134" y="200" width="14" height="60" rx="3" fill="#14b8a6"/>
+  <rect x="155" y="215" width="14" height="45" rx="3" fill="#0d9488"/>
+  <rect x="176" y="225" width="14" height="35" rx="3" fill="#14b8a6"/>
+</svg>

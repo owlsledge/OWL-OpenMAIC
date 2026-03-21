@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" fill="none">
+  <!-- Background circle -->
+  <circle cx="140" cy="140" r="140" fill="#fff7ed"/>
+  <!-- Body -->
+  <circle cx="140" cy="100" r="38" fill="#f97316"/>
+  <!-- Head face -->
+  <circle cx="140" cy="100" r="30" fill="#fde68a"/>
+  <!-- Eyes -->
+  <circle cx="128" cy="95" r="4" fill="#1e293b"/>
+  <circle cx="152" cy="95" r="4" fill="#1e293b"/>
+  <!-- Smile -->
+  <path d="M128 110 Q140 120 152 110" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Body/torso -->
+  <path d="M100 155 Q110 145 140 145 Q170 145 180 155 L188 200 Q164 210 140 210 Q116 210 92 200 Z" fill="#f97316"/>
+  <!-- Checkmark badge -->
+  <circle cx="200" cy="195" r="28" fill="#f97316"/>
+  <path d="M189 195 L197 204 L213 186" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
