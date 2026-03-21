@@ -3,6 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "license": "AGPL-3.0",
+  "contributors": [
+    {
+      "name": "THU-MAIC Team",
+      "url": "https://github.com/THU-MAIC"
+    },
+    {
+      "name": "Trish Uhl, PMP",
+      "url": "https://github.com/owlsledge"
+    }
+  ],
   "engines": {
     "node": ">=20.9.0"
   },
