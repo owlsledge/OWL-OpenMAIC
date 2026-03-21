@@ -82,8 +82,8 @@ https://github.com/user-attachments/assets/b4ab35ac-f994-46b1-8957-e82fe87ff0e9
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/THU-MAIC/OpenMAIC.git
-cd OpenMAIC
+git clone https://github.com/owlsledge/OWL-OpenMAIC.git
+cd OWL-OpenMAIC
 pnpm install
 ```
 
