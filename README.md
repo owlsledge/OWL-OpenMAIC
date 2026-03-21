@@ -38,6 +38,8 @@
 
 ## 📖 Overview
 
+> **Fork notice:** This is a fork of [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC), adapted for **corporate Learning & Development** use cases. The agent registry has been re-oriented with L&D-specific personas (Subject Matter Expert, Evaluator, Scenario Simulator, Job Aid Architect, Action Planning Coach). All original features are preserved. Maintained by [Trish Uhl, PMP](https://github.com/owlsledge).
+
 **OpenMAIC** (Open Multi-Agent Interactive Classroom) is an open-source AI platform that turns any topic or document into a rich, interactive classroom experience. Powered by multi-agent orchestration, it generates slides, quizzes, interactive simulations, and project-based learning activities — all delivered by AI teachers and AI classmates who can speak, draw on a whiteboard, and engage in real-time discussions with you. With built-in [OpenClaw](https://github.com/openclaw/openclaw) integration, you can generate classrooms directly from messaging apps like Feishu, Slack, or Telegram.
 
 https://github.com/user-attachments/assets/b4ab35ac-f994-46b1-8957-e82fe87ff0e9
@@ -472,6 +474,14 @@ If you find OpenMAIC useful in your research, please consider citing:
 ## ⭐ Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=THU-MAIC/OpenMAIC&type=Date)](https://star-history.com/#THU-MAIC/OpenMAIC&Date)
+
+---
+
+## 🙌 Credits
+
+**Original project:** [OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) — created and maintained by the [THU-MAIC team](https://github.com/THU-MAIC) at Tsinghua University. If you use OpenMAIC in research, please cite their [JCST 2026 paper](https://jcst.ict.ac.cn/en/article/doi/10.1007/s11390-025-6000-0).
+
+**This fork:** Maintained by [Trish Uhl, PMP](https://github.com/owlsledge) — adapted for corporate Learning & Development, adding L&D-specific agent personas and workflow tooling.
 
 ---
 

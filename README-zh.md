@@ -475,6 +475,14 @@ OpenMAIC/
 
 ---
 
+## 🙌 致谢 / Credits
+
+**原始项目：** [OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) — 由清华大学 [THU-MAIC 团队](https://github.com/THU-MAIC) 创建并维护。如在研究中使用，请引用其 [JCST 2026 论文](https://jcst.ict.ac.cn/en/article/doi/10.1007/s11390-025-6000-0)。
+
+**本 Fork：** 由 [Trish Uhl, PMP](https://github.com/owlsledge) 维护，面向企业学习与发展（L&D）场景进行了定制，新增了 L&D 专属智能体角色与工作流工具。
+
+---
+
 ## 📄 许可证
 
 本项目基于 [GNU Affero General Public License v3.0](LICENSE) 开源。
