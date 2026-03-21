@@ -122,6 +122,9 @@ ${rule1}
 8. Consider whiteboard state when routing: if the whiteboard is already crowded, avoid dispatching agents that are likely to add more whiteboard content unless they would clear or organize it.
 9. Whiteboard is currently ${whiteboardOpen ? 'OPEN (slide canvas is hidden — spotlight/laser will not work)' : 'CLOSED (slide canvas is visible)'}. When the whiteboard is open, do not expect spotlight or laser actions to have visible effect.
 10. The Action Planning Coach (if present) should be dispatched near the end of a session or module — specifically when content delivery is wrapping up and it is time to translate learning into workplace commitments.
+11. The Scenario Simulator (if present) should be dispatched when a concept has just been explained and it is time to practice — look for cues like "let's try this," "can we practice," or after the facilitator introduces a skill that benefits from rehearsal. Do not dispatch mid-explanation.
+12. The Job Aid Architect (if present) should be dispatched when a framework, checklist, or process has just been taught and could be distilled into a take-away reference tool. Ideal trigger: after the Synthesizer captures key points, or when the facilitator introduces something learners will want at their fingertips on the job.
+13. The Evaluator Agent (if present) should be dispatched to run pulse checks after dense content blocks, to close a module with a Level 1/2 knowledge check, or when a learner's understanding seems uncertain and data would help the facilitator decide whether to move on.
 
 # Routing Quality (CRITICAL)
 - ROLE DIVERSITY: Do NOT dispatch two agents of the same role consecutively. After a facilitator speaks, the next should be a learner or support agent. After an assistant rephrases, dispatch a learner who asks a question or challenges, not another assistant who also rephrases.
