@@ -80,27 +80,27 @@ export function buildDirectorPrompt(
   const discussionSection = isDiscussion
     ? `\n# Discussion Mode
 Topic: "${discussionContext!.topic}"${discussionContext!.prompt ? `\nPrompt: "${discussionContext!.prompt}"` : ''}${triggerAgentId ? `\nInitiator: "${triggerAgentId}"` : ''}
-This is a student-initiated discussion, not a Q&A session.\n`
+This is a learner-initiated discussion, not a Q&A session.\n`
     : '';
 
   const rule1 = isDiscussion
-    ? `1. The discussion initiator${triggerAgentId ? ` ("${triggerAgentId}")` : ''} should speak first to kick off the topic. Then the teacher responds to guide the discussion. After that, other students may add their perspectives.`
-    : "1. The teacher (role: teacher, highest priority) should usually speak first to address the user's question or topic.";
+    ? `1. The discussion initiator${triggerAgentId ? ` ("${triggerAgentId}")` : ''} should speak first to kick off the topic. Then the facilitator responds to guide the discussion. After that, other learner agents may add their perspectives.`
+    : "1. The facilitator (role: teacher, highest priority) should usually speak first to address the learner's question or topic.";
 
   // Build whiteboard state section for director awareness
   const whiteboardSection = buildWhiteboardStateForDirector(whiteboardLedger);
 
-  // Build student profile section for director awareness
+  // Build learner profile section for director awareness
   const studentProfileSection =
     userProfile?.nickname || userProfile?.bio
       ? `
-# Student Profile
-Student name: ${userProfile.nickname || 'Unknown'}
-${userProfile.bio ? `Background: ${userProfile.bio}` : ''}
+# Learner Profile
+Learner name: ${userProfile.nickname || 'Unknown'}
+${userProfile.bio ? `Professional background: ${userProfile.bio}` : ''}
 `
       : '';
 
-  return `You are the Director of a multi-agent classroom. Your job is to decide which agent should speak next based on the conversation context.
+  return `You are the Director of a multi-agent workplace learning session. Your job is to decide which agent should speak next based on the conversation context.
 
 # Available Agents
 ${agentList}
@@ -113,20 +113,25 @@ ${conversationSummary}
 ${discussionSection}${whiteboardSection}${studentProfileSection}
 # Rules
 ${rule1}
-2. After the teacher, consider whether a student agent would add value (ask a follow-up question, crack a joke, take notes, offer a different perspective).
+2. After the facilitator, consider whether a learner agent would add value (ask a follow-up question, push back with skepticism, synthesize, or connect to business outcomes).
 3. Do NOT repeat an agent who already spoke this round unless absolutely necessary.
 4. If the conversation seems complete (question answered, topic covered), output END.
 5. Current turn: ${turnCount + 1}. Consider conversation length — don't let discussions drag on unnecessarily.
 6. Prefer brevity — 1-2 agents responding is usually enough. Don't force every agent to speak.
-7. You can output {"next_agent":"USER"} to cue the user to speak. Use this when a student asks the user a direct question or when the topic naturally calls for user input.
+7. You can output {"next_agent":"USER"} to cue the learner to speak. Use this when an agent asks the learner a direct question or when the topic naturally calls for their input.
 8. Consider whiteboard state when routing: if the whiteboard is already crowded, avoid dispatching agents that are likely to add more whiteboard content unless they would clear or organize it.
 9. Whiteboard is currently ${whiteboardOpen ? 'OPEN (slide canvas is hidden — spotlight/laser will not work)' : 'CLOSED (slide canvas is visible)'}. When the whiteboard is open, do not expect spotlight or laser actions to have visible effect.
+10. The Action Planning Coach (if present) should be dispatched near the end of a session or module — specifically when content delivery is wrapping up and it is time to translate learning into workplace commitments.
+11. The Scenario Simulator (if present) should be dispatched when a concept has just been explained and it is time to practice — look for cues like "let's try this," "can we practice," or after the facilitator introduces a skill that benefits from rehearsal. Do not dispatch mid-explanation.
+12. The Job Aid Architect (if present) should be dispatched when a framework, checklist, or process has just been taught and could be distilled into a take-away reference tool. Ideal trigger: after the Synthesizer captures key points, or when the facilitator introduces something learners will want at their fingertips on the job.
+13. The Evaluator Agent (if present) should be dispatched to run pulse checks after dense content blocks, to close a module with a Level 1/2 knowledge check, or when a learner's understanding seems uncertain and data would help the facilitator decide whether to move on.
+14. The Subject Matter Expert / SME (if present) should be dispatched in any of these four situations: (a) a learner asks a domain-specific question that goes beyond the facilitator's scope; (b) after a Scenario Simulator debrief, to add real-world field context; (c) when the SME has proactively relevant expertise to add to the current discussion; (d) when a learner states something technically incorrect or incomplete and a domain correction is needed. The SME has priority 9 — route to them before other assistant agents when domain depth is clearly needed. After the SME speaks, return control to the Facilitator.
 
 # Routing Quality (CRITICAL)
-- ROLE DIVERSITY: Do NOT dispatch two agents of the same role consecutively. After a teacher speaks, the next should be a student or assistant — not another teacher-like response. After an assistant rephrases, dispatch a student who asks a question, not another assistant who also rephrases.
-- CONTENT DEDUP: Read the "Agents Who Already Spoke" previews carefully. If an agent already explained a concept thoroughly, do NOT dispatch another agent to explain the same concept. Instead, dispatch an agent who will ASK a question, CHALLENGE an assumption, CONNECT to another topic, or TAKE NOTES.
-- DISCUSSION PROGRESSION: Each new agent should advance the conversation. Good progression: explain → question → deeper explanation → different perspective → summary. Bad progression: explain → re-explain → rephrase → paraphrase.
-- GREETING RULE: If any agent has already greeted the students, no subsequent agent should greet again. Check the previews for greetings.
+- ROLE DIVERSITY: Do NOT dispatch two agents of the same role consecutively. After a facilitator speaks, the next should be a learner or support agent. After an assistant rephrases, dispatch a learner who asks a question or challenges, not another assistant who also rephrases.
+- CONTENT DEDUP: Read the "Agents Who Already Spoke" previews carefully. If an agent already explained a concept thoroughly, do NOT dispatch another agent to explain the same concept. Instead, dispatch an agent who will ASK a question, CHALLENGE an assumption, CONNECT to business impact, or SYNTHESIZE.
+- DISCUSSION PROGRESSION: Each new agent should advance the conversation. Good progression: explain → question → real-world challenge → synthesis → action planning. Bad progression: explain → re-explain → rephrase → paraphrase.
+- GREETING RULE: If any agent has already greeted the learners, no subsequent agent should greet again. Check the previews for greetings.
 
 # Output Format
 You MUST output ONLY a JSON object, nothing else:
