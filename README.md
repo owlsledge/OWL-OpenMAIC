@@ -14,7 +14,7 @@
   <a href="https://jcst.ict.ac.cn/en/article/doi/10.1007/s11390-025-6000-0"><img src="https://img.shields.io/badge/Paper-JCST'26-blue?style=flat-square" alt="Paper"/></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-AGPL--3.0-blue.svg?style=flat-square" alt="License: AGPL-3.0"/></a>
   <a href="https://open.maic.chat/"><img src="https://img.shields.io/badge/Demo-Live-brightgreen?style=flat-square" alt="Live Demo"/></a>
-  <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FTHU-MAIC%2FOpenMAIC&envDescription=Configure%20at%20least%20one%20LLM%20provider%20API%20key%20(e.g.%20OPENAI_API_KEY%2C%20ANTHROPIC_API_KEY).%20All%20providers%20are%20optional.&envLink=https%3A%2F%2Fgithub.com%2FTHU-MAIC%2FOpenMAIC%2Fblob%2Fmain%2F.env.example&project-name=openmaic&framework=nextjs"><img src="https://vercel.com/button" alt="Deploy with Vercel" height="20"/></a>
+  <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fowlsledge%2FOWL-OpenMAIC&envDescription=Configure%20at%20least%20one%20LLM%20provider%20API%20key%20(e.g.%20OPENAI_API_KEY%2C%20ANTHROPIC_API_KEY).%20All%20providers%20are%20optional.&envLink=https%3A%2F%2Fgithub.com%2Fowlsledge%2FOWL-OpenMAIC%2Fblob%2Fmain%2F.env.example&project-name=owl-openmaic&framework=nextjs"><img src="https://vercel.com/button" alt="Deploy with Vercel" height="20"/></a>
   <a href="#-openclaw-integration"><img src="https://img.shields.io/badge/OpenClaw-Integration-F4511E?style=flat-square" alt="OpenClaw Integration"/></a>
   <a href="https://github.com/THU-MAIC/OpenMAIC/stargazers"><img src="https://img.shields.io/github/stars/THU-MAIC/OpenMAIC?style=flat-square" alt="Stars"/></a>
   <br/>
@@ -113,7 +113,7 @@ providers:
 
 Supported providers: **OpenAI**, **Anthropic**, **Google Gemini**, **DeepSeek**, and any OpenAI-compatible API.
 
-> **Recommended model:** **Gemini 3 Flash** — best balance of quality and speed. For highest quality (at slower speed), try **Gemini 3.1 Pro**.
+> **Recommended model:** **Gemini 3 Flash Preview** — best balance of quality and speed. For highest quality (at slower speed), try **Gemini 3.1 Pro Preview**.
 >
 > If you want OpenMAIC server APIs to use Gemini by default, also set `DEFAULT_MODEL=google:gemini-3-flash-preview`.
 
@@ -125,7 +125,21 @@ pnpm dev
 
 Open **http://localhost:3000** and start learning!
 
-### 4. Build for Production
+### 4. Choose Your L&D Agents
+
+This fork ships with five corporate Learning & Development agent personas pre-loaded. Open **Settings → Agents** in the UI to enable the ones you want:
+
+| Agent | Role |
+|-------|------|
+| **Action Planning Coach** | Helps learners commit to specific workplace actions |
+| **Evaluator Agent** | Measures training impact across Kirkpatrick's Four Levels |
+| **Scenario Simulator** | Facilitates branching, realistic workplace practice scenarios |
+| **Job Aid Architect** | Turns learning content into take-back reference tools |
+| **Subject Matter Expert** | Adds domain depth and field credibility — customize the persona for your topic |
+
+> **Tip:** The SME persona is generic by default. Edit it in Settings to reflect your specific domain (e.g., "20-year SaaS sales veteran" or "certified compliance officer in financial services").
+
+### 5. Build for Production
 
 ```bash
 pnpm build && pnpm start
@@ -133,7 +147,7 @@ pnpm build && pnpm start
 
 ### Vercel Deployment
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FTHU-MAIC%2FOpenMAIC&envDescription=Configure%20at%20least%20one%20LLM%20provider%20API%20key%20(e.g.%20OPENAI_API_KEY%2C%20ANTHROPIC_API_KEY).%20All%20providers%20are%20optional.&envLink=https%3A%2F%2Fgithub.com%2FTHU-MAIC%2FOpenMAIC%2Fblob%2Fmain%2F.env.example&project-name=openmaic&framework=nextjs)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fowlsledge%2FOWL-OpenMAIC&envDescription=Configure%20at%20least%20one%20LLM%20provider%20API%20key%20(e.g.%20OPENAI_API_KEY%2C%20ANTHROPIC_API_KEY).%20All%20providers%20are%20optional.&envLink=https%3A%2F%2Fgithub.com%2Fowlsledge%2FOWL-OpenMAIC%2Fblob%2Fmain%2F.env.example&project-name=owl-openmaic&framework=nextjs)
 
 Or manually:
 
