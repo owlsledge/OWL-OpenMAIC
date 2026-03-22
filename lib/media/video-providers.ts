@@ -55,8 +55,6 @@ export const VIDEO_PROVIDERS: Record<VideoProviderId, VideoProviderConfig> = {
     requiresApiKey: true,
     defaultBaseUrl: 'https://generativelanguage.googleapis.com',
     models: [
-      { id: 'veo-3.1-fast-generate-001', name: 'Veo 3.1 Fast' },
-      { id: 'veo-3.1-generate-001', name: 'Veo 3.1' },
       { id: 'veo-3.0-fast-generate-001', name: 'Veo 3.0 Fast' },
       { id: 'veo-3.0-generate-001', name: 'Veo 3.0' },
       { id: 'veo-2.0-generate-001', name: 'Veo 2.0' },
