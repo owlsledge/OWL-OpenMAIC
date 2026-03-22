@@ -21,6 +21,8 @@ import type { ThinkingConfig } from '@/lib/types/provider';
 import { apiError } from '@/lib/server/api-response';
 import { createLogger } from '@/lib/logger';
 import { validateUrlForSSRF } from '@/lib/server/ssrf-guard';
+import { TraceCollector } from '@/lib/trace/collector';
+import { exportTrace } from '@/lib/trace/exporter';
 const log = createLogger('Chat API');
 
 // Allow streaming responses up to 60 seconds
@@ -132,6 +134,8 @@ export async function POST(req: NextRequest) {
       try {
         startHeartbeat();
 
+        const traceCollector = new TraceCollector(body, modelString);
+
         const generator = statelessGenerate(
           {
             ...body,
@@ -145,12 +149,16 @@ export async function POST(req: NextRequest) {
         for await (const event of generator) {
           if (signal.aborted) {
             log.info('Request was aborted');
+            traceCollector.markAborted();
             break;
           }
 
+          traceCollector.observe(event);
           const data = `data: ${JSON.stringify(event)}\n\n`;
           await writer.write(encoder.encode(data));
         }
+
+        exportTrace(traceCollector.finalize()).catch(() => {});
 
         stopHeartbeat();
         await writer.close();

@@ -204,7 +204,7 @@ Your role:
 You bridge the gap between knowing and doing — the most critical gap in all of workplace learning.
 
 Tone: Warm, direct, and coaching-oriented. You ask more than you tell. You believe in the learner's ability to change. You hold people gently accountable.`,
-    avatar: '/avatars/coach.png',
+    avatar: '/avatars/coach.svg',
     color: '#f97316',
     allowedActions: [...WHITEBOARD_ACTIONS],
     priority: 8,
@@ -233,7 +233,7 @@ Additional functions:
 You translate learning into evidence. Your data gives L&D teams the credibility to secure investment, demonstrate impact, and continuously improve programs.
 
 Tone: Analytical, precise, and consultative. You ask sharp measurement questions. You translate numbers into narratives that resonate with business stakeholders.`,
-    avatar: '/avatars/evaluator.png',
+    avatar: '/avatars/evaluator.svg',
     color: '#14b8a6',
     allowedActions: [...WHITEBOARD_ACTIONS],
     priority: 7,
@@ -265,7 +265,7 @@ Scenario types you run:
 You are the highest-engagement agent in the session. Learners remember what they practice, not what they hear. Your scenarios create the muscle memory that transfers to the job.
 
 Tone: Vivid, present-tense, immersive. You set scenes with sensory detail. You play characters with distinct voices. You hold learners accountable to their choices. Energetic and challenging — but always psychologically safe.`,
-    avatar: '/avatars/simulator.png',
+    avatar: '/avatars/simulator.svg',
     color: '#a855f7',
     allowedActions: [...WHITEBOARD_ACTIONS],
     priority: 8,
@@ -294,7 +294,7 @@ Your role:
 You bridge the gap between training and performance. A well-designed job aid means learners don't need to remember everything — they just need to know where to look. Your artifacts make expertise accessible at the moment of need.
 
 Tone: Efficient, practical, design-minded. You think in structures: bullets, tables, numbered steps. You ask "when would you actually use this?" before designing anything. You are the voice of practical application.`,
-    avatar: '/avatars/job-aid.png',
+    avatar: '/avatars/job-aid.svg',
     color: '#22c55e',
     allowedActions: [...WHITEBOARD_ACTIONS],
     priority: 7,
@@ -324,7 +324,7 @@ Your relationship to the Facilitator:
 - When you're uncertain, say so — credibility comes from honesty about the limits of your knowledge.
 
 Tone: Authoritative but approachable. You've been in the field. You have opinions. You cite real examples, not textbook ones. You're the person in the room who's actually done the thing being discussed.`,
-    avatar: '/avatars/sme.png',
+    avatar: '/avatars/sme.svg',
     color: '#dc2626',
     allowedActions: [...WHITEBOARD_ACTIONS],
     priority: 9,

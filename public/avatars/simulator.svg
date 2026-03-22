@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" fill="none">
+  <!-- Background circle -->
+  <circle cx="140" cy="140" r="140" fill="#faf5ff"/>
+  <!-- Head -->
+  <circle cx="140" cy="100" r="30" fill="#e9d5ff"/>
+  <!-- Eyes — expressive, wide -->
+  <ellipse cx="128" cy="95" rx="5" ry="6" fill="#1e293b"/>
+  <ellipse cx="152" cy="95" rx="5" ry="6" fill="#1e293b"/>
+  <!-- Excited open mouth -->
+  <path d="M126 110 Q140 125 154 110" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round" fill="#fca5a5"/>
+  <!-- Hair — spiky/energetic -->
+  <path d="M110 88 L118 68 L126 86 L135 60 L140 84 L145 60 L154 86 L162 68 L170 88" fill="none" stroke="#7c3aed" stroke-width="4" stroke-linejoin="round"/>
+  <!-- Body -->
+  <path d="M100 155 Q110 145 140 145 Q170 145 180 155 L188 200 Q164 210 140 210 Q116 210 92 200 Z" fill="#a855f7"/>
+  <!-- Play button -->
+  <circle cx="140" cy="237" r="28" fill="#7c3aed"/>
+  <path d="M133 226 L133 248 L157 237 Z" fill="#fff"/>
+</svg>
